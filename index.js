@@ -36,6 +36,13 @@ app.use('/api/auth',require('./routes/auth'));
 
 app.use('/api/events',require('./routes/events'));
 
+/*Solo produccion, existe el problema que cuando hacemos peticiion a una ruta busca una carpeta
+/auth/... pero si no hace match con ninguna ruta de arriba vamos a devolver el index.html
+*/
+app.get('*',(req,res)=>{
+    res.sendFile(__dirname + '/public/index.html');
+});
+
 
 
 
