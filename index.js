@@ -29,7 +29,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 
-//rutas, 
+//*rutas
 
 // le estamos diciendo que todo lo que vaya a exportar en el require lo habilite en esta ruta.
 app.use('/api/auth',require('./routes/auth'));

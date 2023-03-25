@@ -31,6 +31,7 @@ router.post('/',[
   validarCampos
 ],createEvents);
 
+
 //actualizar eventos
 router.put('/:id',[
   check('title','El titulo es obligatorio').not().isEmpty(),
